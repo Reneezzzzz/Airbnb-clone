@@ -21,6 +21,8 @@ function Button({
 }: ButtonProps) {
   return (
     <button
+      disabled={disabled}
+      onClick={onClick}
       className={`
     relative
     disabled:opacity-50

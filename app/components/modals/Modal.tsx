@@ -9,6 +9,7 @@ interface ModalProps {
   onClose: () => void;
   onSubmit: () => void;
   title?: string;
+  body?: React.ReactElement;
   footer?: React.ReactElement;
   actionLabel: string;
   disabled?: boolean;
@@ -21,6 +22,7 @@ function Modal({
   onClose,
   onSubmit,
   title,
+  body,
   footer,
   actionLabel,
   disabled,
@@ -154,7 +156,7 @@ function Modal({
                 </div>
               </div>
               {/*body*/}
-              <div className="relative p-6 flex-auto"></div>
+              <div className="relative p-6 flex-auto">{body}</div>
               {/*footer*/}
               <div
                 className="
@@ -184,6 +186,7 @@ function Modal({
                     onClick={handleSubmit}
                   />
                 </div>
+                {footer}
               </div>
             </div>
           </div>
